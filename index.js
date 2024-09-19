@@ -170,11 +170,6 @@ async function executeArbitrage() {
             } else {
                 console.log(`\n${arbitrageOpportunity}`);
             }
-
-            // Additionally, show percent difference
-            const averagePrice = (uniswapPerUnitPrice + sushiPerUnitPrice) / 2;
-            const percentDifference = ((Math.abs(pnl)) / averagePrice) * 100;
-            console.log(`\nPercent Difference between Uniswap and SushiSwap: ${percentDifference.toFixed(2)}%`);
         } else {
             console.log('\nUnable to compute PnL due to missing trade price data.');
         }
